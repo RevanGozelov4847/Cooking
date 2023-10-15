@@ -1,0 +1,238 @@
+.menu {
+  .container {
+    margin-bottom: 170px;
+    text-align: center;
+    .info-title {
+      padding-top: 30px;
+      font-size: 40px;
+      color: rgba(0, 0, 0, 0.2);
+      color: #eb5860;
+      position: relative;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: -20px;
+      z-index: -1;
+      margin-top: 100px;
+    }
+    .info-subtitle {
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+      color: rgba(0, 0, 0, 0.8);
+      margin-bottom: 85px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 30px;
+      justify-content: center;
+      width: 100%;
+
+      .menu-breakfast,
+      .menu-lunch,
+      .menu-dinner,
+      .menu-desert,
+      .menu-wine,
+      .menu-drinks {
+        height: 1460px;
+        border: 1px dashed #e6e6e6;
+        background: #fcfcfc;
+        width: 30%;
+        margin-bottom: 50px;
+        &:hover {
+          border: 1px dashed #e52b34;
+          transition: 0.5s;
+        }
+        .icon {
+          display: flex;
+          justify-content: space-between;
+          .pizza {
+            font-size: 45px;
+            color: #e6e6e6;
+          }
+          .burger {
+            font-size: 45px;
+            color: #e6e6e6;
+          }
+        }
+        .inside-breakfast {
+          padding: 0rem 1.5em 0px 1.5em;
+          .title-breakfast {
+            margin-bottom: 44px;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.8);
+          }
+          .one-meal {
+            display: flex;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1.5px dashed #e6e6e6;
+            &:hover {
+              border-bottom: 1.5px dashed #e52b34;
+              .beef {
+                color: #e52b34;
+              }
+            }
+            .meal-breakfast {
+              img {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+              }
+            }
+            .meal-name {
+              padding-left: 20px;
+              .beef-money {
+                display: flex;
+                column-gap: 70px;
+                font-size: 20px;
+                color: #e52b34;
+                font-weight: 600;
+                line-height: 1.3;
+                .beef {
+                  font-size: 17px;
+                  font-weight: 500;
+                  margin-bottom: 8px;
+                  text-align: left;
+                  line-height: 1.5;
+                  color: rgba(0, 0, 0, 0.8);
+                  &:hover {
+                    color: #e52b34;
+                    transition: 0.3s;
+                  }
+                }
+                .money {
+                  text-align: right;
+                }
+              }
+              .meat {
+                margin-bottom: 8px;
+                text-align: left;
+                color: rgba(0, 0, 0, 0.8);
+                font-size: 16px;
+                line-height: 2;
+                font-weight: 400;
+                margin-bottom: 5px;
+              }
+              .span {
+                text-align: left;
+                color: rgba(0, 0, 0, 0.8);
+                font-size: 16px;
+                line-height: 2;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+      .menu-dinner {
+        height: 1120px;
+      }
+      .menu-desert {
+        height: 950px;
+      }
+      .menu-drinks {
+        height: 1290px;
+      }
+    }
+  }
+}
+
+.booking-2 {
+  width: 100%;
+  height: 350px;
+  background-color: #e52b34;
+  .form {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    p {
+      color: #fff;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+
+    .form-first-row {
+      display: flex;
+      column-gap: 30px;
+      flex-wrap: wrap;
+      width: 100%;
+      .name,
+      .email,
+      .phone,
+      .check-in,
+      .time,
+      .option {
+        @include form;
+        width: 30%;
+      }
+    }
+    button {
+    @include reservation-2-button;
+    }
+  }
+}
+
+//1250px
+@media (max-width: 1250px) {
+  .menu {
+    .container {
+      .cards {
+        .menu-breakfast,
+        .menu-lunch,
+        .menu-dinner,
+        .menu-desert,
+        .menu-wine,
+        .menu-drinks {
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+
+//840px
+@media (max-width: 840px) {
+  .menu {
+    .container {
+      .cards {
+        .menu-breakfast,
+        .menu-lunch,
+        .menu-dinner,
+        .menu-desert,
+        .menu-wine,
+        .menu-drinks {
+          width: 80%;
+        }
+      }
+    }
+  }
+  .booking-2 {
+    height: 600px;
+    .container {
+      width: 100%;
+      .form {
+        .form-first-row {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .name,
+          .email,
+          .phone,
+          .check-in,
+          .time,
+          .option {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

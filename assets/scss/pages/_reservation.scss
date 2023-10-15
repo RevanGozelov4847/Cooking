@@ -1,0 +1,32 @@
+.reservation-booking {
+  .container {
+    height: 350px;
+    background-color: #e52b34;
+    .form {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      p {
+        color: #fff;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+      }
+      input,
+      .option {
+        @include form;
+      }
+
+      .form-first-row,
+      .form-second-row {
+        display: flex;
+        column-gap: 30px;
+      }
+      button {
+    @include reservation-2-button;
+    }
+    }
+  }
+}

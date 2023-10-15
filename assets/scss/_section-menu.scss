@@ -1,0 +1,258 @@
+.menu {
+  .container {
+    margin-bottom: 170px;
+    text-align: center;
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 30px;
+      justify-content: center;
+      width: 100%;
+
+      .card-breakfast,
+      .card-lunch,
+      .card-dinner {
+        border: 1px dashed #e6e6e6;
+        background: #fcfcfc;
+        height: 612px;
+        width: 30%;
+        margin-bottom: 50px;
+        &:hover {
+          border: 1px dashed #e52b34;
+          transition: 0.5s;
+        }
+        .icon {
+          display: flex;
+          justify-content: space-between;
+          .pizza {
+            font-size: 45px;
+            color: #e6e6e6;
+          }
+          .burger {
+            font-size: 45px;
+            color: #e6e6e6;
+          }
+        }
+        .inside-breakfast {
+          padding: 0rem 1.5em 0px 1.5em;
+          .title-breakfast {
+            margin-bottom: 44px;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.8);
+          }
+          .one-meal {
+            display: flex;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1.5px dashed #e6e6e6;
+            &:hover {
+              border-bottom: 1.5px dashed #e52b34;
+              .beef {
+                color: #e52b34;
+              }
+            }
+            .meal-breakfast {
+              img {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+              }
+            }
+            .meal-name {
+              padding-left: 20px;
+              .beef-money {
+                display: flex;
+                column-gap: 70px;
+                font-size: 20px;
+                color: #e52b34;
+                font-weight: 600;
+                line-height: 1.3;
+                .beef {
+                  font-size: 17px;
+                  font-weight: 500;
+                  margin-bottom: 8px;
+                  text-align: left;
+                  line-height: 1.5;
+                  color: rgba(0, 0, 0, 0.8);
+                  &:hover {
+                    color: #e52b34;
+                    transition: 0.3s;
+                  }
+                }
+                .money {
+                  text-align: right;
+                }
+              }
+              .meat {
+                margin-bottom: 8px;
+                text-align: left;
+                color: rgba(0, 0, 0, 0.8);
+                font-size: 16px;
+                line-height: 2;
+                font-weight: 400;
+                margin-bottom: 5px;
+              }
+              .span {
+                text-align: left;
+                color: rgba(0, 0, 0, 0.8);
+                font-size: 16px;
+                line-height: 2;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+    }
+    .booking {
+      display: flex;
+      column-gap: 64px;
+      .form {
+        margin-left: 23px;
+        width: 24%;
+        height: 628px;
+        background-color: #e52b34;
+        padding: 48px;
+        min-width: 370px;
+        p {
+          color: #fff;
+          font-weight: 700;
+          font-size: 22px;
+          letter-spacing: 1px;
+          line-height: 1.5;
+          margin-bottom: 16px;
+        }
+        .name {
+          @include form;
+        }
+        .email {
+          @include form;
+        }
+        .phone {
+          @include form;
+        }
+        .check-in {
+          @include form;
+        }
+        .time {
+          @include form;
+        }
+        .option {
+          @include form;
+        }
+        input {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        button {
+          background: #fff;
+          border: 1px solid #fff;
+          color: #000000;
+          cursor: pointer;
+          border-radius: 2px;
+          font-weight: 400;
+          text-align: center;
+          font-size: 1rem;
+          line-height: 1.5;
+          padding: 16px 24px;
+          width: 100%;
+          margin-bottom: 20px;
+          &:hover {
+            color: #e52b34;
+            transition: 0.5s;
+          }
+        }
+      }
+      .info {
+        padding-top: 90px;
+        background: url(./../images/reservation-back.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 70% 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .info-title {
+          position: relative;
+          font-size: 40px;
+          color: rgba(0, 0, 0, 0.2);
+          color: #eb5860;
+          font-family: "Dancing Script", cursive;
+          margin-bottom: -20px;
+          z-index: 2;
+        }
+        .info-subtitle {
+          font-size: 40px;
+          font-weight: 900;
+          line-height: 1.3;
+          position: absolute;
+          color: rgba(0, 0, 0, 0.8);
+          padding-top: 25px;
+          z-index: 2;
+        }
+        .info-description {
+          width: 355px;
+          font-size: 16px;
+          line-height: 2;
+          font-weight: 400;
+          color: gray;
+          padding-top: 125px;
+        }
+      }
+      .image {
+        img {
+          width: 650px;
+          height: 500px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+//1250px
+@media (max-width: 1250px) {
+  .menu {
+    .container {
+      .cards {
+        .card-breakfast {
+          width: 45%;
+        }
+        .card-lunch {
+          width: 45%;
+        }
+        .card-dinner {
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+
+//840px
+@media (max-width: 840px) {
+  .menu {
+    .container {
+      .cards {
+        .card-breakfast {
+          width: 90%;
+          .inside-breakfast {
+            .one-meal {
+              text-align: center;
+            }
+          }
+        }
+        .card-lunch {
+          width: 90%;
+        }
+        .card-dinner {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,241 @@
+footer {
+  background: #1a1a1a;
+  .container {
+    width: 73%;
+    .footer-cards {
+      flex-wrap: wrap;
+      width: 100%;
+      display: flex;
+      column-gap: 20px;
+      padding-top: 84px;
+      padding-bottom: 60px;
+      .footer-info {
+        flex: 0 0 23%;
+        flex-wrap: wrap;
+        .logo {
+          color: #fff;
+          margin-bottom: 40px;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1.5;
+        }
+        .description {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+          width: 100%;
+          padding-bottom: 30px;
+        }
+        .social {
+          display: flex;
+          .twitter {
+            position: absolute;
+            color: white;
+            transition: 0.2s;
+            &::before {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 40px;
+              width: 40px;
+              background: #e52b34;
+              border-radius: 50%;
+              position: relative;
+            }
+          }
+
+          .facebook {
+            margin-left: 25px;
+            position: absolute;
+            color: white;
+            transition: 0.6s;
+            &::before {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 40px;
+              width: 40px;
+              background: #e52b34;
+              border-radius: 50%;
+              position: relative;
+            }
+          }
+
+          .instagram {
+            margin-left: 50px;
+            position: absolute;
+            color: white;
+            transition: 1s;
+            &::before {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 40px;
+              width: 40px;
+              background: #e52b34;
+              border-radius: 50%;
+              position: relative;
+            }
+          }
+        }
+      }
+
+      .footer-date {
+        flex: 0 0 23%;
+        flex-wrap: wrap;
+        .title {
+          color: #fff;
+          margin-bottom: 40px;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1.5;
+        }
+        .time {
+          display: flex;
+          column-gap: 20px;
+          .dates {
+            width: 50%;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 2;
+          }
+          .hours {
+            width: 50%;
+            font-size: 14px;
+            line-height: 2;
+            font-weight: 400;
+            color: gray;
+          }
+        }
+      }
+      .footer-instagram {
+        flex: 0 0 22%;
+        flex-wrap: wrap;
+        // display: flex;
+        // flex-direction: column;
+        .title {
+          color: #fff;
+          margin-bottom: 40px;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1.5;
+        }
+        .first-row,
+        .second-row {
+          display: flex;
+          height: 100px;
+          img {
+            width: 33%;
+            height: 100px;
+            object-fit: cover;
+          }
+        }
+      }
+      .footer-account {
+        // padding: 0 15px 15px 15px;
+        flex: 0 0 23%;
+        flex-wrap: wrap;
+        .title {
+          color: #fff;
+          margin-bottom: 40px;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1.5;
+        }
+        .description {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+          width: 100%;
+          padding-bottom: 16px;
+        }
+        .email {
+          @include footer-button;
+          background: rgba(255, 255, 255, 0.1);
+          color: rgba(255, 255, 255, 0.7);
+          width: 95%;
+        }
+        .subscribe {
+          @include footer-button;
+          cursor: pointer;
+          width: 95%;
+        }
+      }
+    }
+  }
+  .copy-right {
+    background-color: #e52b34;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 400;
+    padding: 16px 0;
+    text-align: center;
+    p {
+      width: 90%;
+      .heart {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      span {
+        cursor: pointer;
+        &:hover {
+          color: white;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .container {
+    width: 76%;
+    .footer-cards {
+      flex-wrap: wrap;
+      // flex-direction: column;
+      width: 100%;
+      .footer-info {
+        flex: 0 0 48% !important;
+      }
+      .footer-date {
+        flex: 0 0 48% !important;
+      }
+      .footer-instagram {
+        margin-top: 30px;
+        flex: 0 0 48% !important;
+      }
+      .footer-account {
+        margin-top: 30px;
+        flex: 0 0 48% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 685px) {
+  .container {
+    width: 95% !important;
+    .footer-cards {
+      flex-wrap: wrap;
+      width: 100%;
+      .footer-info {
+        flex: 0 0 100% !important;
+      }
+      .footer-date {
+        margin-top: 60px;
+        flex: 0 100% !important;
+      }
+      .footer-instagram {
+        margin-top: 30px;
+        flex: 0 0 100% !important;
+      }
+      .footer-account {
+        margin-top: 60px;
+        flex: 0 0 100% !important;
+      }
+    }
+  }
+}

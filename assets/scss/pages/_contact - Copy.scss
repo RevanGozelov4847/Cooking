@@ -1,0 +1,109 @@
+.contact {
+  padding: 8em 0;
+  .container {
+    .contact-info {
+      line-height: 1.5;
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .cards {
+      width: 100%;
+      display: flex;
+      column-gap: 30px;
+      .card {
+        width: 25%;
+        height: 176px;
+        background-color: #e52b34;
+        padding: 2em;
+        p,
+        span,
+        a,
+        .info {
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 16px;
+          line-height: 2;
+          font-weight: 400;
+        }
+        span {
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+.location-contact {
+  padding-bottom: 128px;
+  .container {
+    .map-contact {
+      display: flex;
+      flex-wrap: wrap;
+      .map {
+        width: 555px;
+      }
+      .contact-form {
+        width: 50%;
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        .title {
+          line-height: 1.5;
+          color: rgba(0, 0, 0, 0.8);
+          font-weight: 700;
+          margin-bottom: 3rem;
+          font-size: 1.5rem;
+        }
+        
+          .form {
+            &:focus {
+              outline-offset: 0px;
+              outline: none;
+              border:1px solid black;
+            }
+          }
+        
+      }
+      .form,
+      .textarea {
+        height: 52px;
+        background: #fff;
+        color: #000000;
+        font-size: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        padding: 6px 12px;
+      }
+      .textarea {
+        width: 100%;
+        height: 182px;
+      }
+      button {
+        @include button;
+        height: 60px;
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .location-contact {
+    .container {
+      .map-contact {
+        .contact-form {
+          width: 97%;
+          padding: 48px;
+          display: flex;
+          flex-direction: column;
+        }
+        .map {
+          width: 800px;
+        }
+      }
+    }
+  }
+}
